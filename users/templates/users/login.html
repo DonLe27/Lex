@@ -3,108 +3,145 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
 <style>
-.standardFont {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
-}
-.titleFont {
-    font-family: 'Text Me One', sans-serif;
-    font-weight: 700;
-}
-body {
-    background: url("https://puu.sh/Ccs04/37ab0353b0.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+        .standardFont {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 300;
+        }
+        .titleFont {
+            font-family: 'Text Me One', sans-serif;
+            font-weight: 700;
+        }
+        body {
+            background: url("https://puu.sh/Ccs04/37ab0353b0.png");
+            background-repeat: no-repeat;
+            background-size: cover;
 
-    background-color: rgb(12, 12, 80);
-}
-.loginButton {
-    padding: 10px 20px;
-    background-color: rgba(60, 154, 221, 0.6);
-    color: white;
-    border: 1px solid rgba(60, 154, 221, 0.6);
-    border-radius: 1.5em;
-    font-size: 1.1em;
-    margin-top: 50px;
-    max-width: 500px;
-}
-.loginButton:hover {
-    background-color: #74BFF6;
-    border: 1px solid rgba(60, 154, 221, 0.6);
-}
-.loginButton:active {
-    background-color: #F2D24D;
-    color: black;
-    border: 1px solid #F2D24D;
-}
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-fieldset {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 2px solid rgba(60, 154, 221, 0.6);
-    background-color: rgba(60, 154, 221, 0.6);
-    color: white;
-    text-align: center;
-}
-fieldset input {
-    padding: 0.5em;
-    margin: 0.5em;
-    font-size: 0.9em;
-    border-radius: 1.5em;
-    border: 1px solid white;
-    text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #4DACF2;
-}
-.loginBox {
-    max-width: 400px;
-    border-radius: 50px;
-}
-.label {
-    padding: 10px 20px;
-    width: 50%;
-    background-color: white;
-    color: #4DACF2;
-    border: 1px solid white;
-    border-radius: 1.5em;
-}
-.needAnAccount {
-    background-color: rgba(60, 154, 221, 0.6);
-    font-size: 20px;
-    color: white;
-    max-width: 170px;
-    padding: 10px 10px 23px 10px;
-    border-radius: 1.5em;
-}
-.needAnAccount a {
-    background-color: white;
-    font-size: 16px;
-    color: #4DACF2;
-    padding: 10px 20px;
-    border-radius: 1.5em;
-    text-decoration: none;
-}
-.needAnAccount a:hover {
-    color: #4DACF2;
-    background-color: #EEEEED;
-}
-.needAnAccount p {
-    margin: 0px;
-    padding: 5px 2px;
-    margin-bottom: 20px;
-}
-.centerText {
-    text-align: center;
-}
+            background-color: rgb(12, 12, 80);
+        }
+        .loginButton {
+            padding: 10px 20px;
+            background-color: rgba(60, 154, 221, 0.6);
+            color: white;
+            border: 1px solid rgba(60, 154, 221, 0.6);
+            border-radius: 1.5em;
+            font-size: 1.1em;
+            margin-top: 50px;
+            max-width: 500px;
+        }
+        .loginButton:hover {
+            background-color: #74BFF6;
+            border: 1px solid rgba(60, 154, 221, 0.6);
+        }
+        .loginButton:active {
+            background-color: #F2D24D;
+            color: black;
+            border: 1px solid #F2D24D;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        fieldset {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 0.75em;
+            padding-bottom: 0.75em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            border: 2px solid rgba(60, 154, 221, 0.6);
+            background-color: rgba(60, 154, 221, 0.6);
+            color: white;
+            text-align: center;
+        }
+        fieldset input {
+            padding: 0.5em;
+            margin: 0.5em;
+            font-size: 0.9em;
+            border-radius: 1.5em;
+            border: 1px solid white;
+            text-align: center;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #4DACF2;
+        }
+        .loginBox {
+            max-width: 400px;
+            border-radius: 50px;
+        }
+        .label {
+            padding: 10px 20px;
+            width: 50%;
+            background-color: white;
+            color: #4DACF2;
+            border: 1px solid white;
+            border-radius: 1.5em;
+        }
+        .needAnAccount {
+            background-color: rgba(60, 154, 221, 0.6);
+            font-size: 20px;
+            color: white;
+            max-width: 170px;
+            padding: 10px 10px 23px 10px;
+            border-radius: 1.5em;
+        }
+        .needAnAccount a {
+            background-color: white;
+            font-size: 16px;
+            color: #4DACF2;
+            padding: 10px 20px;
+            border-radius: 1.5em;
+            text-decoration: none;
+        }
+        .needAnAccount a:hover {
+            color: #4DACF2;
+            background-color: #EEEEED;
+        }
+        .needAnAccount p {
+            margin: 0px;
+            padding: 5px 2px;
+            margin-bottom: 20px;
+        }
+        .centerText {
+            text-align: center;
+        }
+        .nb {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(12, 12, 80, 0.6);
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 12px;
+            height: 56px;
+            border-radius: 1.5em;
+        }
+        .nb a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;      
+            font-family: 'Text Me One', sans-serif;
+            font-weight: 500;
+        }
+        .nb a:hover {
+            background-color: rgba(27, 27, 117, 0.6)
+        }
+        .nb a:active {
+            background-color: rgba(44, 44, 138, 0.6)
+        }
+        .active {
+            background-color: rgba(64, 105, 182, 0.6)
+        }
+        .left {
+            float: left;
+        }
+        .logo {
+            float: left;
+        }
+
 </style>
 {% if messages %}
   <ul class="messages">
@@ -114,7 +151,13 @@ fieldset input {
   </ul>
 {% endif %}
 {% block content %}
-    <div class="content-section standardFont" style="margin-top: 7%;">
+    <ul class="nb">
+        <img src="https://puu.sh/CcvvP/3b68c5c353.png" width=66px class="logo">
+        <li class="left active"><a href="/login">Login</a></li>
+        <li class="left"><a href="/register">Register</a></li>
+        <li class="left"><a href="/about">About</a></li>
+    </ul>  
+    <div class="content-section standardFont" style="margin-top: 3%;">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group loginBox">

@@ -13,6 +13,12 @@ class UserRegisterForm(UserCreationForm):
  
     language_preference = ModelMultipleChoiceField(queryset=Language.objects.all(), widget=Select2MultipleWidget)
 
+    def __init__(self, *args, **kwargs):
+        super(UserRegisterForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None;
+
 class UserUpdateForm(UserChangeForm):
     class Meta:
         model = CustomUser
