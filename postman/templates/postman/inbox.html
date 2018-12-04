@@ -1,7 +1,64 @@
 {% extends "postman/base_folder.html" %}
 {% load i18n %}
-{% block pm_folder_title %}{% trans "Received Messages" %}{% endblock %}
-{% block pm_undelete_button %}{% endblock %}
-{% block pm_recipient_header %}{% endblock %}
-{% block pm_date %}{% trans "Received" %}{% endblock %}
-{% block pm_recipient_cell %}{% endblock %}
+{% block pm_folder_title %}{% trans "Received Messages" %}
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
+<style>
+    button {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 400;
+        border: 0px
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    button:hover {
+        color: #4DACF2;
+        font-weight: 700;
+    }
+    .standardFont {
+        
+    }
+    form {
+        background-color: white;
+        color: #4DACF2;
+        max-width: 1050px;
+        border-radius: 1.5em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    form a {
+        text-decoration: none;
+        color: #4DACF2;
+        padding: 10px;
+    }
+    form input {
+        padding: 10px;
+        background-color: white;
+        
+    }
+    form option { 
+        background-color: red;
+    }
+    .contain button {
+        background-color: red;
+    }
+    form text {
+
+    }
+</style>
+{% endblock %}
+{% block pm_undelete_button %}
+
+{% endblock %}
+{% block pm_recipient_header %}
+
+{% endblock %}
+{% block pm_date %}{% trans "Received" %}
+
+{% endblock %}
+{% block pm_recipient_cell %}
+
+{% endblock %}

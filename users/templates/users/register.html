@@ -21,7 +21,9 @@
         body {
             /* Why doesn't this work?! */
             background-image: url("https://puu.sh/CcdwE/eb2173eb21.png"); 
-            background-color: darkblue;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #7EC0EE
         }
         .center {
             display: block;
@@ -34,7 +36,7 @@
             padding-left: 0.9em;
             padding-right: 0.9em;
             border: 2px solid #4DACF2;
-            background-color: #4DACF2;
+            background-color: rgba(77, 172, 242, 0.6);
             color: white;
             text-align: center;
         }
@@ -130,12 +132,13 @@
         }
 	</style>
 </head>
+
 <body>
     <div class="content-section standardFont" style="margin-top: 7%">
         <div class="container center">
             <form method="POST">
                 {% csrf_token %}
-                <fieldset class="form-group roundedEdges">
+                <fieldset class="form-group roundedEdges ">
                     <legend class="border-bottom mb-4 titleFont joinToday">JOIN TODAY</legend>
                     {{ form|crispy }}
                 </fieldset>

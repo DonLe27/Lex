@@ -22,3 +22,7 @@
 .pm_message.pm_rejected .pm_header {
  background-color: #FDD;
 }
+
+body {
+	background-color: red;
+}

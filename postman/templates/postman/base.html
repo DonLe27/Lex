@@ -3,13 +3,57 @@
 {% block title %}{% trans "Messaging" %}{% endblock %}
 {% block extrahead %}{{ block.super }}
 <link type="text/css" media="all" rel="stylesheet" href="{% static 'postman/css/postman.css' %}" />
+<style>
+    .standardFont {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300;
+    }
+    .titleFont {
+        font-family: 'Text Me One', sans-serif;
+        font-weight: 700;
+    }
+    body {
+        background: url("/static/nightlion-teacher.png") 50% 0 no-repeat fixed;
+        background-color: darkblue;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .centerText {
+        text-align: center;
+    }
+    .container {
+        background-color: #4DACF2;
+        max-width: 200px;
+        padding: 30px;
+        border-radius: 1.5em;
+    }
+    .container li {
+        list-style-type: none;
+        padding-right: 37px;
+        font-size: 1.1em;
+        
+    }
+    .container a {
+        text-decoration: none;
+        color: white;
+    }
+    .container a:hover {
+        color: green;
+        font-weight: 400;
+    }
+</style>
 {% endblock %}
 {% block postman_menu %}
-<ul id="postman_menu">{% postman_unread as unread_count %}
- <li><a href="{% url 'postman:inbox' %}">&raquo;&nbsp;{% trans "Inbox" %}{% if unread_count %} <strong>({{ unread_count }})</strong>{% endif %}</a></li>
- <li><a href="{% url 'postman:sent' %}">&raquo;&nbsp;{% trans "Sent Messages" %}</a></li>
- <li><a href="{% url 'postman:write' %}">&raquo;&nbsp;{% trans "Write" %}</a></li>
- <li><a href="{% url 'postman:archives' %}">&raquo;&nbsp;{% trans "Archives" %}</a></li>
- <li><a href="{% url 'postman:trash' %}">&raquo;&nbsp;{% trans "Trash" %}</a></li>
-</ul>
+<div class="standardFont container center centerText">
+    <ul id="postman_menu">{% postman_unread as unread_count %}
+    <li><a href="{% url 'postman:inbox' %}">{% trans "Inbox" %}{% if unread_count %} <strong>({{ unread_count }})</strong>{% endif %}</a></li>
+    <li><a href="{% url 'postman:sent' %}">{% trans "Messages" %}</a></li>
+    <li><a href="{% url 'postman:write' %}">{% trans "Write" %}</a></li>
+    <li><a href="{% url 'postman:archives' %}">{% trans "Archives" %}</a></li>
+    <li><a href="{% url 'postman:trash' %}">{% trans "Trash" %}</a></li>
+    </ul>
+</div>
 {% endblock %}

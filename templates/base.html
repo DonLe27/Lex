@@ -1,11 +1,30 @@
 <html>
-<head>
-<title>{% block title %}{% endblock %}</title>
-{% block extrahead %}{% endblock %}
-</head>
-<body>
-<h1>Welcome to the homepage</h1>
-{% block postman_menu %}{% endblock %}
-{% block content %}{% endblock %}
-</body>
+    <head>
+    <title>{% block title %}{% endblock %}</title>
+    {% block extrahead %}
+        <style>
+            h1 {
+                color: #4DACF2;
+                font-family: 'Text Me One', sans-serif;
+                font-weight: 700;
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+                background-color: white;
+                max-width: 700px;
+                border-radius: 1.5em;
+            }
+            body {
+                background-image: url("https://puu.sh/CcdwE/eb2173eb21.png")
+            }
+        </style>
+    {% endblock %}
+    </head>
+    <body>
+    <h1>Welcome Back!</h1>
+    {% block postman_menu %}{% endblock %}
+    {% block content %}{% endblock %}
+    </body>
 </html>
