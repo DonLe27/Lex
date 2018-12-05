@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['langx.us-west-2.elasticbeanstalk.com', 'localhost',
                  'ec2-35-164-112-152.us-west-2.compute.amazonaws.com', '127.0.0.1']
 
-
+#forceupdate
 # Application definition
 
 INSTALLED_APPS = [
