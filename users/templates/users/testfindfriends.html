@@ -1,4 +1,132 @@
-<form method ='GET' action=''>
+
+
+
+{% load crispy_forms_tags %}
+{% block content %}
+<!DOCTYPE html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
+    <style type="text/css">
+    	body {
+            /* Why doesn't this work?! */
+            background-image: url("https://puu.sh/CcdwE/eb2173eb21.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #7EC0EE
+        }
+
+        .container {
+            max-width: 500px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nb {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(77, 172, 242, 0.6);
+            top: 12px;
+            height: 56px;
+            border-radius: 1.5em;
+        }
+        .nb a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+
+            text-decoration: none;
+            font-family: 'Text Me One', sans-serif;
+            font-weight: 500;
+        }
+
+        .nb a:hover {
+            background-color: rgba(106, 190, 250, 0.6)
+        }
+        .active {
+            background-color: rgba(123, 235, 255, 0.6)
+        }
+        .left {
+            float: left;
+        }
+
+        .joinToday {
+            padding: 10px 20px;
+            width: 50%;
+            background-color: white;
+            color: #4DACF2;
+            border: 1px solid white;
+            border-radius: 1.5em;
+            font-size: 1.1em;
+        }
+
+
+
+        .right {
+        	float: right;
+        }
+
+        li {
+        	list-style-type: none;
+        }
+
+        li .left {
+        	width: 50%;
+        }
+
+        legend {
+        	font-family: 'Text Me One', sans-serif;
+            font-weight: 700;
+            position: relative;
+            top: -35px;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .roundedEdges {
+            border-radius: 50px;
+            border: 2px solid #4DACF2;
+        }
+
+        .standardFont {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 200;
+        }
+
+        .userInfo {
+            padding-top: 0.75em;
+            padding-bottom: 0.75em;
+            padding-left: 0.9em;
+            padding-right: 0.9em;
+            border: 2px solid #4DACF2;
+            background-color: rgba(77, 172, 242, 0.6);
+            color: white;
+            text-align: center;
+        }
+         .titleFont {
+            font-family: 'Text Me One', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+	<ul class="nb">
+        <img src="https://puu.sh/CcvvP/3b68c5c353.png" width=66px class="logo" />
+        <li class="left"><a href="#">Friends</a></li>
+        <li class="left"><a href="#">Send a Message</a></li>
+        <li class="left active"><a href="/about">About</a></li>
+
+        <li class="right"><a href="/logout">Logout</a></li>
+    </ul>
+    <form method ='GET' action=''>
     <input type ='text' name='username' placeholder='Search by Username' />
     <input type='submit' value='Search' />
 </form>
@@ -14,4 +142,19 @@
     <a href="{% url 'profile_with_pk' pk=user.pk %}">
         <p>{{ user.username }}</p>
     </a>
+    {% if user not in friends %}
+        <form action="{% url 'change_friends' operation='add' pk=user.pk %}">
+            <button>Add Friend</button>
+        </form>
+    {% endif %}
 {% endfor %}
+    <div class="content-section standardFont" style="margin-top: 6%">
+    	<div class="container center">
+
+
+		 </div>
+	</div>
+</body>
+
+{% endblock content %}
+
